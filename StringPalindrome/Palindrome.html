@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Palindrome Checker Problem</title>
+	<script>
+
+function palindromeCheck() {
+	var str = document.getElementById("input").value; //takes input
+	input = str;
+	bool = '';
+	str = str.split('').reverse().join('');
+	if (str == input) {
+		bool = 'True';
+	} else {
+		bool = 'False'
+	}
+	document.getElementById("output").innerHTML = str + ': ' + bool; //prints output
+}
+
+	</script>
+</head>
+	<body>
+String palindrome checker in Javascript. Takes an input then sees if it is a palindrome.<br><br>
+
+<input type="text" id="input"><br>
+<button onclick="palindromeCheck()">Check Palindrome</button><br>
+<div id="output"></div>
+
+	</body>
+	</html>
