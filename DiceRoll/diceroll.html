@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dice Roll Problem</title>
+	<script>
+		var dice = [
+		"5d12",
+		"1d15",
+		"8d3",
+		"3d16",
+		"50d50",
+		"4d22",
+		"0d12",
+		];
+
+		function rollDice(dice) {
+			var diceArray = dice.split('d');
+			var numberOfDice = parseInt(diceArray[0]);
+			var numberOfSides = parseInt(diceArray[1]);
+			var total = 0;
+			var printRolls = '';
+			for (let i=0; i<numberOfDice; i++) {
+				var roll = Math.floor(Math.random() * numberOfSides) + 1;
+				total += roll;
+				printRolls += ' '+roll;
+			}
+			console.log(total+':'+printRolls)
+		}
+
+		for (let i=0; i<dice.length; i++) {
+			rollDice(dice[i]);
+		}
+
+	</script>
+</head>
+	<body>
+D&D dice rolling simulator in JavaScript. Check console for results.<br>
+Rolls x number of dice, with x number of sides.
+	</body>
+	</html>
