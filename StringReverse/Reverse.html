@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>String Reverse Problem</title>
+	<script>
+
+function reverse() {
+	var str = document.getElementById("input").value; //takes input
+	str = str.split(''); //splits in to seperate characters
+	str = str.reverse(); //reverses the elements
+	str = str.join(''); //joins together again
+	document.getElementById("output").innerHTML = str; //prints output
+}
+
+	</script>
+</head>
+	<body>
+String reverser in Javascript. Takes an input then reverses it.<br><br>
+
+<input type="text" id="input"><br>
+<button onclick="reverse()">Reverse</button><br>
+<div id="output"></div>
+
+	</body>
+	</html>
